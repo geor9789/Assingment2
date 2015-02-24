@@ -1,7 +1,0 @@
-"C:/Users/Anthony/Documents/GitHub/Assingment2/Assignment2/build/android/gen/android/support/v7/appcompat/R.java"
-"C:/Users/Anthony/Documents/GitHub/Assingment2/Assignment2/build/android/gen/com/bus353/assignment2/ApplicationStylesheet.java"
-"C:/Users/Anthony/Documents/GitHub/Assingment2/Assignment2/build/android/gen/com/bus353/assignment2/Assignment2Activity.java"
-"C:/Users/Anthony/Documents/GitHub/Assingment2/Assignment2/build/android/gen/com/bus353/assignment2/Assignment2AppInfo.java"
-"C:/Users/Anthony/Documents/GitHub/Assingment2/Assignment2/build/android/gen/com/bus353/assignment2/Assignment2Application.java"
-"C:/Users/Anthony/Documents/GitHub/Assingment2/Assignment2/build/android/gen/com/bus353/assignment2/R.java"
-"C:/Users/Anthony/Documents/GitHub/Assingment2/Assignment2/build/android/gen/ti/modules/titanium/ui/R.java"
