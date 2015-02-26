@@ -1,0 +1,91 @@
+// this sets the background color of the master UIView (when there are no windows/tab groups on it)
+Titanium.UI.setBackgroundColor('#000');
+
+// create tab group
+var tabGroup = Titanium.UI.createTabGroup();
+
+
+//
+// create base UI tab and root window
+//
+var win1 = Titanium.UI.createWindow({  
+    title:'Tab 1',
+    backgroundImage: 'Pictures/SkiBackground.jpg'
+});
+var tab1 = Titanium.UI.createTab({  
+    icon:'KS_nav_views.png',
+    title:'Tab 1',
+    window:win1
+});
+
+var label1 = Titanium.UI.createLabel({
+	color:'#FFFFFF',
+	text:'Get You Lift Tickets Here!',
+	font:{fontSize:30,fontStyle:'Calibri'},
+	textAlign:'center',
+	width:'auto',
+	top: 10
+});
+
+win1.add(label1);
+
+var switchButton = Ti.UI.createButton({
+	title: 'Switch Windows'
+	});
+//
+// create controls tab and root window
+//
+var win2 = Titanium.UI.createWindow({  
+    title:'Tab 2',
+    backgroundColor:'#70AAFF'
+});
+var tab2 = Titanium.UI.createTab({  
+    icon:'KS_nav_ui.png',
+    title:'Tab 2',
+    window:win2
+});
+
+var label2 = Titanium.UI.createLabel({
+	color:'#FFFFFF',
+	text:'I am Window 2',
+	font:{fontSize:20,fontFamily:'Helvetica Neue'},
+	textAlign:'center',
+	width:'auto'
+});
+
+win2.add(label2);
+
+var switchOrientation = Ti.UI.createButton({
+	title: 'Make Landscape',
+	Bottom: 10,
+	right: 10
+});
+switchOrientation.addEventListener('click', rotateLayout);
+win1.add(switchOrientation);
+
+function rotateLayout(){
+	win1.layout = 'horizontal';
+	switchOrientation.hide();
+}
+
+var NextButton = Ti.UI.createButton({
+	title: 'Next',
+	Bottom: '90%',
+	right: '50%'
+});
+NextButton.addEventListener('click', switchpages);
+win1.add(NextButton);
+
+function switchpages(){
+	win2.open();
+}
+//
+//  add tabs
+//
+//tabGroup.addTab(tab1);  
+//tabGroup.addTab(tab2);  
+
+
+// open tab group
+//tabGroup.open();
+win1.open();

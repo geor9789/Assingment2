@@ -1,0 +1,7 @@
+"C:/Users/Anthony/Documents/GitHub/Assingment2/TestApp/build/android/gen/android/support/v7/appcompat/R.java"
+"C:/Users/Anthony/Documents/GitHub/Assingment2/TestApp/build/android/gen/com/test/ApplicationStylesheet.java"
+"C:/Users/Anthony/Documents/GitHub/Assingment2/TestApp/build/android/gen/com/test/R.java"
+"C:/Users/Anthony/Documents/GitHub/Assingment2/TestApp/build/android/gen/com/test/TestappActivity.java"
+"C:/Users/Anthony/Documents/GitHub/Assingment2/TestApp/build/android/gen/com/test/TestappAppInfo.java"
+"C:/Users/Anthony/Documents/GitHub/Assingment2/TestApp/build/android/gen/com/test/TestappApplication.java"
+"C:/Users/Anthony/Documents/GitHub/Assingment2/TestApp/build/android/gen/ti/modules/titanium/ui/R.java"

@@ -9,31 +9,29 @@ var tabGroup = Titanium.UI.createTabGroup();
 // create base UI tab and root window
 //
 var win1 = Titanium.UI.createWindow({  
-    title:'Tab 1',
-    backgroundColor:'#70AAFF'
+    title:'Home',
+    backgroundImage: 'Pictures/SkiBackground.jpg'
 });
 var tab1 = Titanium.UI.createTab({  
     icon:'KS_nav_views.png',
     title:'Tab 1',
-    backgroundColor:'#FFFFFF',
     window:win1
 });
 
 var label1 = Titanium.UI.createLabel({
 	color:'#FFFFFF',
 	text:'Get You Lift Tickets Here!',
-	font:{fontSize:20,fontStyle:'Calibri'},
+	font:{fontSize:30,fontStyle:'Calibri'},
 	textAlign:'center',
-	width:'auto'
+	width:'auto',
+	top: 10
 });
 
 win1.add(label1);
 
-//
-// create controls tab and root window
-//
+
 var win2 = Titanium.UI.createWindow({  
-    title:'Tab 2',
+    title:'Info',
     backgroundColor:'#70AAFF'
 });
 var tab2 = Titanium.UI.createTab({  
@@ -44,28 +42,50 @@ var tab2 = Titanium.UI.createTab({
 
 var label2 = Titanium.UI.createLabel({
 	color:'#FFFFFF',
-	text:'I am Window 2',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
+	text:'More Info Here:',
+	font:{fontSize:30,fontFamily:'Helvetica Neue'},
 	textAlign:'center',
-	width:'auto'
+	width:'auto',
+	top: 20
 });
 
 win2.add(label2);
 
-var switchOrientation = Ti.UI.createButton({title: 'Make Landscape'});
+var switchOrientation = Ti.UI.createButton({
+	title: 'Make Landscape',
+	Bottom: 10,
+	right: 10
+});
 switchOrientation.addEventListener('click', rotateLayout);
 win1.add(switchOrientation);
 
 function rotateLayout(){
-	win1.orientationModes = [Ti.UI.LANDSACPE_RIGHT];
+	win1.layout = 'horizontal';
 	switchOrientation.hide();
 }
-//
-//  add tabs
-//
-tabGroup.addTab(tab1);  
-tabGroup.addTab(tab2);  
 
+var NextButton = Ti.UI.createButton({
+	title: 'Switch',
+	Bottom: 5,
+	left: 5
+});
+NextButton.addEventListener('click', switchpages);
+win1.add(NextButton);
 
-// open tab group
-tabGroup.open();
+function switchpages(){
+	win2.open();
+}
+
+var switchButton = Ti.UI.createButton({
+	title: 'Switch',
+	Bottom: 5,
+	left: 5
+});
+switchButton.addEventListener('click', switchBack);
+win2.add(switchButton);
+
+function switchBack(){
+	win1.open();
+	win2.close();
+}
+win1.open();
