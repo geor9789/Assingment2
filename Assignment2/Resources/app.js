@@ -60,7 +60,7 @@ switchOrientation.addEventListener('click', rotateLayout);
 win1.add(switchOrientation);
 
 function rotateLayout(){
-	win1.layout = 'horizontal';
+	win1.orientation = 'horizontal';
 	switchOrientation.hide();
 }
 
